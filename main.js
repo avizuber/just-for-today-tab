@@ -21,12 +21,18 @@
         if (minutesLeft < 10) {
             minutesLeft = "0" + minutesLeft;
         }
+        if (minutesLeft === 60) {
+            hoursLeft += hoursLeft;
+        }
         minutesDiv.innerText = minutesLeft;
 
         const secondsDiv = get("seconds");
         let secondsLeft = 60 - date.getSeconds();
         if (secondsLeft < 10) {
             secondsLeft = "0" + secondsLeft;
+        }
+        if (secondsLeft === 60) {
+            minutesLeft += minutesLeft;
         }
         secondsDiv.innerText = secondsLeft;
     }
