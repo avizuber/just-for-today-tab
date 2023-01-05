@@ -1,22 +1,22 @@
 (function () {
     'use strict';
 
-    function get(id) {
+    const getElement = id => {
         return document.getElementById(id);
     }
 
-    function countdown() {
+    const countdown = () => {
 
         let date = new Date();
 
-        const hoursDiv = get("hours");
+        const hoursDiv = getElement("hours");
         let hoursLeft = 23 - date.getHours();
         if (hoursLeft < 10) {
             hoursLeft = "0" + hoursLeft;
         }
         hoursDiv.innerText = hoursLeft;
 
-        const minutesDiv = get("minutes");
+        const minutesDiv = getElement("minutes");
         let minutesLeft = 60 - date.getMinutes();
         if (minutesLeft < 10) {
             minutesLeft = "0" + minutesLeft;
@@ -26,7 +26,7 @@
         }
         minutesDiv.innerText = minutesLeft;
 
-        const secondsDiv = get("seconds");
+        const secondsDiv = getElement("seconds");
         let secondsLeft = 60 - date.getSeconds();
         if (secondsLeft < 10) {
             secondsLeft = "0" + secondsLeft;

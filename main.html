@@ -1,18 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Just For Today</title>
-</head>
-<body>
-    <div id="clock">
-        <div id="hours"></div>
-        <div id="minutes"></div>
-        <div id="seconds"></div>
-    </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #C9A992;
+            font-family: 'Rubik Spray Paint', cursive;
+        }
 
+        #theGrid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+            grid-template-rows: 2fr 1fr 1fr 2fr;
+            grid-column-gap: 20px;
+        }
+
+        #clock {
+            grid-column: 2 / 5;
+            grid-row: 2;
+        }
+
+        #clock div {
+            display: inline-block;
+            color: #96C8EB;
+            font-size: 100px;
+
+        }
+
+        #clock span {
+            color: #FDF518;
+            font-size: 100px;
+        }
+
+        #units {
+            grid-column: 2 / 5;
+            grid-row: 3;
+            color: #EE5D88;
+            font-size: 30px;
+        }
+
+        #units div {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="theGrid">
+        <div id="clock">
+            <div id="hours"></div>
+            <span>:</span>
+            <div id="minutes"></div>
+            <span>:</span>
+            <div id="seconds"></div>
+        </div>
+        <div id="units">
+            <div>Hours</div>
+            <div>Minutes</div>
+            <div>Seconds</div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
+
 </html>
