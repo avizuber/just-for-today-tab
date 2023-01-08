@@ -18,30 +18,32 @@
 
         const minutesDiv = getElement("minutes");
         let minutesLeft = 60 - date.getMinutes();
+        if (minutesLeft === 60) {
+            minutesLeft = 0;
+            hoursLeft += hoursLeft;
+        }
         if (minutesLeft < 10) {
             minutesLeft = "0" + minutesLeft;
-        }
-        if (minutesLeft === 60) {
-            hoursLeft += hoursLeft;
         }
         minutesDiv.innerText = minutesLeft;
 
         const secondsDiv = getElement("seconds");
         let secondsLeft = 60 - date.getSeconds();
+        if (secondsLeft === 60) {
+            secondsLeft = 0;
+            minutesLeft += minutesLeft;
+        }
         if (secondsLeft < 10) {
             secondsLeft = "0" + secondsLeft;
-        }
-        if (secondsLeft === 60) {
-            minutesLeft += minutesLeft;
         }
         secondsDiv.innerText = secondsLeft;
     }
 
-    const backgrounds = new Array(
+    const backgrounds = [
         'url(images2/rocio-guillen-bmVs4mDwI3k-unsplash-edited.jpg)',
         'url(images2/cristian-giordano-qtqcSwzekFo-unsplash.jpg)',
         'url(images2/lorenzo-lamonica-PJAXlV_H8-4-unsplash.jpg)'
-    );
+    ];
 
     const setBackground = () => {
         let date = new Date;
