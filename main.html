@@ -14,18 +14,16 @@
 <body>
     <div id="theGrid">
         <h1>Just For Today</h1>
-        <div id="clock">
-            <div id="hours"></div>
-            <span>:</span>
-            <div id="minutes"></div>
-            <span>:</span>
-            <div id="seconds"></div>
-        </div>
-        <div id="units">
-            <div>Hours</div>
-            <div>Minutes</div>
-            <div>Seconds</div>
-        </div>
+        <div id="countdownDisplay">
+                <div id="hours" class="clock hourDisplay"></div>
+                <span class="colon">:</span>
+                <div id="minutes" class="clock minuteDisplay"></div>
+                <span class="colon">:</span>
+                <div id="seconds" class="clock secondDisplay"></div>
+                <div class="units hourDisplay">Hours</div>
+                <div class="units minuteDisplay">Minutes</div>
+                <div class="units secondDisplay">Seconds</div>
+         </div>
         <div id="quote"></div>
         <div id="quoteSource"></div>
     </div>

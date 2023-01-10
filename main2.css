@@ -11,59 +11,69 @@ body {
 
 h1 {
     color: #FFFFFF;
-    grid-column: 2/4;
+    grid-column: 3/ span 4;
     grid-row: 2;
     font-size: 90px;
 }
 
 #theGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 0.5fr 0.5fr 1fr;
-    grid-column-gap: 20px;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: 1fr 1fr 1fr 0.5fr 0.5fr 1fr; 
     height: inherit;
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-#clock {
-    grid-column: 2 / 5;
-    grid-row: 3;
+#countdownDisplay {
+    grid-column: 3 / 5;
+    grid-row: 3 / 5;
+    display: grid;
+    grid-template-columns: 1fr 0.25fr 1fr 0.25fr 120px;
+    grid-template-rows: 1fr 1fr;
 }
 
-#clock div {
-    display: inline-block;
+.clock {
+    font-size: 100px;
     color: #FFFFFF;
-    font-size: 100px;
-
 }
 
-#clock span {
+.colon {
+    font-size: 100px;
     color: #96C8EB;
-    font-size: 100px;
 }
 
-#units {
-    grid-column: 2 / 5;
-    grid-row: 4;
+.units{
     color: #96C8EB;
     font-size: 30px;
 }
 
-#units div {
-    display: inline-block;
+.hourDisplay {
+    grid-column: 1;
+    text-align: end;
 }
 
+.minuteDisplay {
+    grid-column: 3;
+    text-align: center;
+}
+
+.secondDisplay {
+    grid-column: 5;
+    text-align: start;
+}
+  
 #quote{
     color: #FFFFFF;
-    grid-column: 5;
+    grid-column: 8 / 11;
     grid-row: 5;
+    justify-self: end;
     text-align: right;
     font-size: 20px;
 }
 
 #quoteSource {
     color: #FFFFFF;
-    grid-column: 5;
+    grid-column: 10;
     grid-row: 6;
     text-align: right;
 }
