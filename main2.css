@@ -77,3 +77,19 @@ h1 {
     grid-row: 6;
     text-align: right;
 }
+
+@media screen  and (max-width: 930px){
+    h1 {
+        font-size: 60px;
+    }
+
+    #quote{
+        grid-row: 6;
+        grid-column: 3 / 11;
+    }
+
+    #quoteSource {
+        grid-row: 7;
+        font-size: 12px;
+    }
+}
