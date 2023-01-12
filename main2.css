@@ -7,6 +7,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 h1 {
@@ -61,22 +62,39 @@ h1 {
     grid-column: 5;
     text-align: start;
 }
+
+.quoteAndSource {
+    color: #FFFFFF;
+    text-align: right;
+    opacity: 0;
+    animation: QuoteAnimation;
+    animation-duration: 3s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
   
 #quote{
-    color: #FFFFFF;
     grid-column: 8 / 11;
     grid-row: 5;
     justify-self: end;
-    text-align: right;
     font-size: 20px;
 }
 
 #quoteSource {
-    color: #FFFFFF;
     grid-column: 10;
     grid-row: 6;
-    text-align: right;
 }
+
+@keyframes QuoteAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+    }
+  }
 
 @media screen  and (max-width: 930px){
     h1 {
