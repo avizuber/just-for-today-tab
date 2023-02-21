@@ -7,63 +7,25 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
-h1 {
-    color: #FFFFFF;
-    grid-column: 3/ span 4;
-    grid-row: 2;
-    font-size: 90px;
+.just-for-today {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
 }
 
-#theGrid {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-template-rows: 1fr 1fr 1fr 0.5fr 0.5fr 1fr; 
-    height: inherit;
-    background-color: rgba(0, 0, 0, 0.25);
+.top-section {
+    height: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#countdownDisplay {
-    grid-column: 3 / 5;
-    grid-row: 3 / 5;
-    display: grid;
-    grid-template-columns: 1fr 0.25fr 1fr 0.25fr 120px;
-    grid-template-rows: 1fr 1fr;
-}
-
-.clock {
-    font-size: 100px;
-    color: #FFFFFF;
-}
-
-.colon {
-    font-size: 100px;
-    color: #96C8EB;
-}
-
-.units{
-    color: #96C8EB;
-    font-size: 30px;
-}
-
-.hourDisplay {
-    grid-column: 1;
-    text-align: end;
-}
-
-.minuteDisplay {
-    grid-column: 3;
-    text-align: center;
-}
-
-.secondDisplay {
-    grid-column: 5;
-    text-align: start;
-}
-
-.quoteAndSource {
+.quote {
     color: #FFFFFF;
     text-align: right;
     opacity: 0;
@@ -72,18 +34,58 @@ h1 {
     animation-delay: 0.1s;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+    max-width: 600px;
+    font-size: 30px;
 }
-  
-#quote{
-    grid-column: 8 / 11;
-    grid-row: 5;
-    justify-self: end;
+
+.title {
+    color: #FFFFFF;
+    grid-column: 3/ span 5;
+    grid-row: 1;
+    font-size: 55px;
+}
+
+.countdown-wrapper {
+    margin-top: 30vh;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.countdown {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.clock {
+    font-size: 50px;
+    color: #FFFFFF; 
+}
+
+.colon {
+    font-size: 50px;
+    color: #96C8EB;
+}
+
+.units{
+    color: #96C8EB;
     font-size: 20px;
 }
 
-#quoteSource {
-    grid-column: 10;
-    grid-row: 6;
+.brand-banner {
+    grid-row: 7;
+    grid-column: 2 / 11;
+    background: #804D74;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 4px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.brand-banner a {
+    color: white;
 }
 
 @keyframes QuoteAnimation {
@@ -97,17 +99,7 @@ h1 {
   }
 
 @media screen  and (max-width: 930px){
-    h1 {
-        font-size: 60px;
-    }
-
-    #quote{
-        grid-row: 6;
-        grid-column: 3 / 11;
-    }
-
-    #quoteSource {
-        grid-row: 7;
-        font-size: 12px;
+    .title {
+        font-size: 35px;
     }
 }
