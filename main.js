@@ -2,7 +2,7 @@
     'use strict';
 
     const backgrounds = [
-        'url(images/jason-blackeye-GPPAjJicemU-unsplash.jpg)',
+        'url(images/jason-blackeye-byqgHC0XFME-unsplash.jpg)',
         'url(images/cristian-giordano-qtqcSwzekFo-unsplash.jpg)',
         'url(images/lorenzo-lamonica-PJAXlV_H8-4-unsplash.jpg)'
     ];
